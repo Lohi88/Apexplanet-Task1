@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lohi's Craft Corner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>🎨 Lohi's Crafts</h2>
+      <ul>
+        <li onclick="showSection('about')" class="active">🧵 About Crafts</li>
+        <li onclick="showSection('favorite')">🎨 My Favorite Crafts</li>
+        <li onclick="showSection('learn')">📚 Learn More</li>
+        <li onclick="showSection('message')">💌 Message from Lohi</li>
+      </ul>
+    </aside>
+    <!-- Main Content -->
+    <main class="main">
+        <section id="about" class="section active">
+            <h2>🧵 About Crafts</h2>
+            <p>
+              Crafts are a wonderful way to express creativity and make something beautiful with your own hands. From paper to thread, anything can become art.
+              <br><br>
+              Crafting is the art of turning simple materials into meaningful, beautiful creations using creativity and hands-on techniques. It includes a variety of activities like paper quilling, origami, embroidery, pottery, upcycling, and more. For many, it’s not just a hobby—but a way to express emotions, reduce stress, and connect with their inner artist.
+              <br><br>
+              For me, crafting is a form of meditation. I enjoy every moment of cutting, folding, gluing, and decorating. One of my favorite things to create is greeting cards using quilling paper. Each swirl, shape, and color combination tells a story. I also enjoy transforming recyclable materialslike cardboard, bottles, and newspapers into decorative items. It makes me feel creative and eco-conscious at the same time!
+              <br><br>
+              Every handmade item I create holds a piece of my heart. Whether it’s a birthday card for a loved one or a wall hanging made with waste materials, I make sure each detail is filled with love. Seeing a smile on someone’s face when they receive something I made is the most rewarding feeling.
+              <br><br>
+              One of the best parts of crafting is being able to reuse and repurpose items. Old magazines, boxes, jars, and buttons often get a second life as decorative art. Crafting not only promotes creativity but also encourages mindful, sustainable living.
+              <br><br>
+              🧠 Want to know more? Visit <a href="https://craftylikegranny.com" target="_blank" >Crafty Like Granny</a> for creative ideas and inspiration!
+            </p>
+          </section>
+          
+
+      <section id="favorite" class="section">
+        <h2>🎨 My Favorite Crafts</h2>
+        <div style="display: flex; gap: 20px;">
+            <img src="additional_craft.jpg" alt="Craft 1" style="width: 300px; height:500px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+            <img src="your_image.jpg" alt="Craft 2" style="width: 300px; height:500px;border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+        </div>        
+         <p>I enjoy making greeting cards with quilling paper and decorative items from recyclable materials.</p>
+      </section>
+
+      <section id="learn" class="section">
+        <h2>📚 Learn More</h2>
+        <a href="https://www.pinterest.com" target="_blank">Explore Craft Ideas on Pinterest</a>
+      </section>
+      
+      <section id="message" class="section">
+        <h2>💌 Message from Lohi</h2>
+        <button onclick="alert('Stay creative and keep crafting with love! 💖')">Click for a Crafty Surprise</button>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+      document.querySelectorAll(".sidebar li").forEach(li => li.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+</body>
+</html>
